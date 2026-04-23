@@ -1,0 +1,12 @@
+<launch>
+    <arg name="user_debug" default="false"/>
+    
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find a1_description)/xacro/robot.xacro'
+            DEBUG:=$(arg user_debug)"/>
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+        <param name="publish_frequency" type="double" value="1000.0"/>
+    </node>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find unitree_guide)/config/check_joint.rviz" />
+</launch>

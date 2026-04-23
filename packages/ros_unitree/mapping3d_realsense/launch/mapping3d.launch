@@ -1,0 +1,10 @@
+<launch>
+  <arg name="use_sim" default="false" />
+  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
+    <param name="resolution" value="0.05"/>
+    <param name="frame_id" value="odom"/>
+    <param name="sensor_model/max_range" value="5.0"/>
+    <remap if="$(arg use_sim)" from="cloud_in" to="/camera/depth/points" />
+    <remap unless="$(arg use_sim)" from="cloud_in" to="/camera/depth/color/points" />
+  </node>
+</launch>

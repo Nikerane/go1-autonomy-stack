@@ -1,0 +1,40 @@
+# catkin build artifacts
+build/
+devel/
+install/
+.catkin_tools/
+.catkin_workspace
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archives (shouldn't be in repo)
+*.tar.gz
+*.zip
+*.deb
+
+# ROS
+*.bag
+.ros/
+
+# Depthai build dirs (we don't vendor these)
+.hunter/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Compiled shared libs (should not be committed; rebuild from source)
+*.so
+*.so.*
+
+# Local-only notes — override with !handover.md if needed
+TODO.local.md
