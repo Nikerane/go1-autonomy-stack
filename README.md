@@ -12,7 +12,7 @@ Onboard perception + autonomy stack for the **Unitree Go1 Edu Plus** under ROS M
 - [x] **M2** — Camera integration. OAK-D mounted, depthai-core v2.24.0 + depthai-ros patched for Melodic, `/oak/rgb/image_raw` and `/oak/stereo/image_raw` publishing.
 - [ ] **M3** — 2D SLAM. pcl2scan + gmapping, benchmark vs hector.
 - [ ] **M4** — Point-to-point navigation. AMCL + move_base.
-- [ ] **M5** — Evaluation + thesis writing.
+- [ ] **M5** — Evaluation: map accuracy, nav success rate, compute load benchmarks.
 
 See [docs/08-next-steps.md](docs/08-next-steps.md) for the full roadmap.
 
